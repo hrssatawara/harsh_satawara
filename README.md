@@ -25,15 +25,25 @@
     DB_USERNAME="your database username"
     DB_PASSWORD="your database password"
    ```
-5. **Run the following command**
+   
+5. **Update the mail credentials in `.env` file**
+   ```
+    MAIL_MAILER=smtp
+    MAIL_HOST=sandbox.smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME="yours"
+    MAIL_PASSWORD="yours"
+    MAIL_ENCRYPTION=tls
+   ```
+6. **Run the following command**
    ```
    php artisan migrate --seed
    ```
-6. **Run npm command**
+7. **Run npm command**
    ```
    npm install
    ```
-7. **Run the command to compile the theme**
+8. **Run the command to compile the theme**
     ```
     npm run dev
     ```

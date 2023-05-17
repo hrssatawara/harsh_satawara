@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "5499bcac-c822-4997-8328-6852867cd348",
+		"name": "harsh_satawara",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27418449",
+		"_collection_link": "https://cloudy-satellite-231252.postman.co/workspace/Team-Workspace~1e0a727c-824f-4f6a-8836-f77908d82a4f/collection/27418449-5499bcac-c822-4997-8328-6852867cd348?action=share&creator=27418449&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "admin/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/register",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/login",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/list employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/employee",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/get employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/employee/5",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"employee",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/add employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "aplication/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Shreyansh",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Panchal",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "shreyanshs1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Ahmd",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "IT",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "GJ",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "AHM",
+							"type": "text"
+						},
+						{
+							"key": "zip_code",
+							"value": "389658",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/employee",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/update employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "aplication/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Harshs",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Satawaras",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hsaa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "Ahmd",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "IT",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "GJ",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "AHM",
+							"type": "text"
+						},
+						{
+							"key": "zip_code",
+							"value": "389658",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "2020-02-20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/employee/3",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"employee",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/delete employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "aplication/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{APP_URL}}/api/admin/employee/1",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
